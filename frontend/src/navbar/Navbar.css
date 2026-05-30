@@ -1,0 +1,81 @@
+.navbar {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 24px;
+
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.08);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-btn {
+    background: transparent;
+    border: none;
+
+    color: #64748b;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    padding: 12px 18px;
+
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #2563eb;
+}
+
+.signup-btn {
+    border: none;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(37, 99, 235, 0.25);
+}
