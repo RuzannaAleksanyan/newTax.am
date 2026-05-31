@@ -5,42 +5,60 @@ export default function FeaturesSection() {
         <section className="features-section">
 
             <div className="features-header">
+
+                <span>SMART TOOLS</span>
+
                 <h2>
-                    Հզոր գործիքներ ձեր ֆինանսների
-                    <span> արդյունավետ կառավարման համար</span>
+                    Ֆինանսական կառավարում
+                    <br />
+                    նոր մակարդակում
                 </h2>
 
-                <p>
-                    Մեր հարթակը տրամադրում է բոլոր անհրաժեշտ
-                    գործիքները՝ ֆինանսական գործընթացների հետ կապը պարզեցնելու
-                    և վերահսկելու համար։
-                </p>
             </div>
 
-            <div className="features-grid">
+            <div className="bento-grid">
 
-                <div className="feature-card">
-                    <div className="feature-icon">💳</div>
+                <div className="bento-card large">
+                    <div className="emoji">💳</div>
 
                     <h3>Ծախսերի վերահսկում</h3>
 
                     <p>
-                        Հետևեք ձեր ամենօրյա, ամսական և տարեկան ծախսերին,
-                        վերլուծեք ֆինանսական հոսքերը և բացահայտեք այն
-                        ոլորտները, որտեղ հնարավոր է ավելի արդյունավետ
-                        կառավարել բյուջեն։
+                        Տեսեք բոլոր ծախսերը մեկ վայրում և
+                        ստացեք խելացի վերլուծություններ։
+                    </p>
+
+                    {/* <div className="mini-chart"></div> */}
+                </div>
+
+                <div className="bento-card">
+                    <div className="emoji">📈</div>
+
+                    <h3>Եկամուտներ</h3>
+
+                    <p>
+                        Հետևեք աճին իրական ժամանակում։
                     </p>
                 </div>
 
-                <div className="feature-card">
-                    <div className="feature-icon">📈</div>
+                <div className="bento-card">
+                    <div className="emoji">📊</div>
 
-                    <h3>Եկամուտների կառավարում</h3>
+                    <h3>Analytics</h3>
 
                     <p>
-                        Կենտրոնացրեք եկամուտների բոլոր աղբյուրները մեկ
-                        հարթակում, հետևեք դրանց աճին և գնահատեք ձեր
-                        ֆինանսական արդյունավետությունը։
+                        Խորքային ֆինանսական վերլուծություն։
+                    </p>
+                </div>
+
+                <div className="bento-card wide">
+                    <div className="emoji">⚡</div>
+
+                    <h3>AI Օգնական</h3>
+
+                    <p>
+                        Առաջարկում է խնայողությունների
+                        և ֆինանսական օպտիմալացման տարբերակներ։
                     </p>
                 </div>
 
