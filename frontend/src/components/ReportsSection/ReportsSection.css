@@ -1,0 +1,39 @@
+.reports-section {
+    padding: 120px 8%;
+}
+
+.reports-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.reports-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.reports-text p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.report-card {
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+}
+
+.report-card strong {
+    display: block;
+    margin-bottom: 20px;
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+@media(max-width:900px){
+    .reports-content{
+        grid-template-columns:1fr;
+    }
+}
