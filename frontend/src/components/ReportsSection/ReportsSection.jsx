@@ -9,13 +9,66 @@ export default function ReportsSection() {
                 <div className="reports-preview">
 
                     <div className="report-card">
-                        <h3>Ֆինանսական ամփոփում</h3>
 
-                        <p>Եկամուտներ</p>
-                        <strong>2,450,000 ֏</strong>
+                        <div className="report-header">
+                            <h3>Ֆինանսական ամփոփում</h3>
+                            <span className="status">
+                                Այս ամիս
+                            </span>
+                        </div>
 
-                        <p>Ծախսեր</p>
-                        <strong>1,320,000 ֏</strong>
+                        <div className="report-item">
+                            <span>Եկամուտներ</span>
+                            <strong className="income">
+                                2,450,000 ֏
+                            </strong>
+                        </div>
+
+                        <div className="progress">
+                            <div className="progress-fill income-fill"></div>
+                        </div>
+
+                        <div className="report-item">
+                            <span>Ծախսեր</span>
+                            <strong className="expense">
+                                1,320,000 ֏
+                            </strong>
+                        </div>
+
+                        <div className="progress">
+                            <div className="progress-fill expense-fill"></div>
+                        </div>
+
+                        <div className="report-item">
+                            <span>Շահույթ</span>
+                            <strong className="profit">
+                                1,130,000 ֏
+                            </strong>
+                        </div>
+
+                        <div className="chart">
+
+                            <div className="bar b1"></div>
+                            <div className="bar b2"></div>
+                            <div className="bar b3"></div>
+                            <div className="bar b4"></div>
+                            <div className="bar b5"></div>
+                            <div className="bar b6"></div>
+
+                        </div>
+
+                        <div className="report-actions">
+
+                            <button>
+                                📄 PDF
+                            </button>
+
+                            <button>
+                                📊 Excel
+                            </button>
+
+                        </div>
+
                     </div>
 
                 </div>
