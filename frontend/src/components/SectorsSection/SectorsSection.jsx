@@ -4,7 +4,25 @@ export default function SectorsSection() {
     return (
         <section className="section light">
 
-            <h2>Ոլորտներ</h2>
+            {/* <h2>Ոլորտներ</h2> */}
+            <div className="section-header">
+
+                <span className="section-badge">
+                    🚀 Գործունեության ոլորտներ
+                </span>
+
+                <h2>
+                    Բացահայտեք մեր
+                    <span> հիմնական ոլորտները</span>
+                </h2>
+
+                <p>
+                    Մենք առաջարկում ենք լուծումներ տնտեսության
+                    տարբեր ճյուղերի համար՝ ապահովելով
+                    արդյունավետություն և նորարարություն։
+                </p>
+
+            </div>
 
             <div className="cards">
 
