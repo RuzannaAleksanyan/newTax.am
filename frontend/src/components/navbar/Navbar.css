@@ -47,6 +47,31 @@
     gap: 12px;
 }
 
+.language-btn {
+    border: none;
+
+    background: rgba(37, 99, 235, 0.08);
+
+    color: #2563eb;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.language-btn:hover {
+    background: rgba(37, 99, 235, 0.15);
+
+    transform: translateY(-2px);
+}
+
 .login-btn {
     background: transparent;
     border: none;
@@ -74,11 +99,9 @@
 
     border-radius: 12px;
 
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #3b82f6
-    );
+    background: linear-gradient(135deg,
+            #2563eb,
+            #3b82f6);
 
     color: white;
 
@@ -95,7 +118,7 @@
     transform: translateY(-2px);
 
     box-shadow:
-        0 10px 25px rgba(37,99,235,.25);
+        0 10px 25px rgba(37, 99, 235, .25);
 
     color: white;
 }
@@ -144,6 +167,11 @@
         font-size: .9rem;
     }
 
+    .language-btn {
+        padding: 10px 12px;
+        font-size: .9rem;
+    }
+
 }
 
 /* =========================
@@ -170,4 +198,8 @@
         font-size: .85rem;
     }
 
+    .language-btn {
+        padding: 8px 10px;
+        font-size: .85rem;
+    }
 }
