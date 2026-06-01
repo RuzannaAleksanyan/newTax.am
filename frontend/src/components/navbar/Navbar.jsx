@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Navbar() {
@@ -12,8 +12,32 @@ export default function Navbar() {
         );
     };
 
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () =>
+            window.removeEventListener(
+                "scroll",
+                handleScroll
+            );
+
+    }, []);
+
     return (
-        <nav className="navbar">
+        <nav
+            className={
+                scrolled
+                    ? "navbar scrolled"
+                    : "navbar"
+            }
+        >
 
             <Link to="/" className="logo">
                 Tax.am

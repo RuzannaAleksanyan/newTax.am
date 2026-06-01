@@ -226,6 +226,10 @@
     font-size: 1.2rem;
 }
 
+.send-btn:active {
+    transform: scale(.97);
+}
+
 /* =========================
    Tablet
 ========================= */

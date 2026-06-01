@@ -40,7 +40,7 @@
 }
 
 .bento-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px) scale(1.02);
 }
 
 .large {

@@ -86,6 +86,9 @@
         0 25px 60px rgba(37, 99, 235, 0.15);
 
     animation: floatCard 4s ease-in-out infinite;
+
+    animation:
+        floatCard 6s ease-in-out infinite;
 }
 
 .currency-icon {
@@ -342,4 +345,37 @@
         width: 24px;
     }
 
+}
+
+@keyframes floatCard {
+
+    0% {
+        transform:
+            translateY(0px)
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            translateY(-6px)
+            rotate(.5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(0deg);
+    }
+
+    75% {
+        transform:
+            translateY(-6px)
+            rotate(-.5deg);
+    }
+
+    100% {
+        transform:
+            translateY(0px)
+            rotate(0deg);
+    }
 }
