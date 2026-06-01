@@ -2,6 +2,9 @@
     padding: 120px 8%;
     position: relative;
     overflow: hidden;
+
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .reports-section::before {
@@ -87,6 +90,9 @@
     transition: .35s;
 
     animation: floatCard 5s ease-in-out infinite;
+
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .report-card:hover {
@@ -236,27 +242,34 @@
     box-shadow:
         0 12px 30px rgba(37,99,235,.25);
 }
+@media (max-width: 1200px) {
 
-@keyframes growBar {
-    from {
-        height: 0;
+    .reports-content {
+        gap: 50px;
+    }
+
+    .reports-text h2 {
+        font-size: 2.8rem;
     }
 }
 
-@keyframes floatCard {
-    0%,100% {
-        transform: translateY(0);
-    }
+@media (max-width: 992px) {
 
-    50% {
-        transform: translateY(-12px);
+    .reports-section {
+        padding: 90px 6%;
     }
-}
-
-@media (max-width: 900px) {
 
     .reports-content {
         grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .reports-preview {
+        order: 2;
+    }
+
+    .reports-text {
+        order: 1;
     }
 
     .reports-text h2 {
@@ -264,6 +277,105 @@
     }
 
     .report-card {
-        padding: 25px;
+        max-width: 650px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .reports-section {
+        padding: 80px 5%;
+    }
+
+    .section-tag {
+        font-size: .9rem;
+        padding: 8px 14px;
+    }
+
+    .reports-text h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .reports-text p {
+        font-size: .95rem;
+    }
+
+    .reports-text li {
+        font-size: .95rem;
+    }
+
+    .report-card {
+        padding: 22px;
+    }
+
+    .report-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .status {
+        font-size: .75rem;
+        padding: 6px 10px;
+    }
+
+    .chart {
+        height: 120px;
+        gap: 8px;
+    }
+
+    .report-actions {
+        flex-direction: column;
+    }
+
+    .report-actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .reports-section {
+        padding: 70px 4%;
+    }
+
+    .reports-text {
+        text-align: center;
+    }
+
+    .reports-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .reports-text ul {
+        text-align: left;
+    }
+
+    .report-card {
+        padding: 18px;
+        border-radius: 24px;
+    }
+
+    .report-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .currency-rate {
+        font-size: 2rem;
+    }
+
+    .chart {
+        height: 100px;
+        gap: 6px;
+    }
+
+    .bar {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .report-item strong {
+        font-size: .95rem;
     }
 }
