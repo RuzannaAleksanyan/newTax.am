@@ -51,9 +51,12 @@ export default function Navbar() {
                     🌐 {language}
                 </button>
 
-                <button className="login-btn">
+                <Link
+                    to="/login"
+                    className="login-btn"
+                >
                     Login
-                </button>
+                </Link>
 
                 <Link
                     to="/signup"

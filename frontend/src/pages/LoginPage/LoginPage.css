@@ -1,4 +1,4 @@
-.signup-page {
+.login-page {
     min-height: 100vh;
 
     display: flex;
@@ -6,9 +6,6 @@
     align-items: center;
 
     padding-top: 80px;
-
-    align-items: flex-start;
-    padding-top: 120px;
 
     box-sizing: border-box;
 
@@ -29,7 +26,7 @@
         #f8fafc;
 }
 
-.signup-page::before {
+.login-page::before {
     content: "";
 
     position: absolute;
@@ -47,7 +44,7 @@
     filter: blur(120px);
 }
 
-.signup-page::after {
+.login-page::after {
     content: "";
 
     position: absolute;
@@ -65,7 +62,7 @@
     filter: blur(120px);
 }
 
-.signup-card {
+.login-card {
     position: relative;
     z-index: 2;
 
@@ -90,28 +87,24 @@
     gap: 18px;
 }
 
-.signup-card h1 {
+.login-card h1 {
     text-align: center;
 
     font-size: 2.3rem;
     font-weight: 800;
 
     color: #0f172a;
-
-    margin-bottom: 5px;
 }
 
-.signup-card p {
+.login-card p {
     text-align: center;
 
     color: #64748b;
 
-    margin-bottom: 15px;
-
-    line-height: 1.7;
+    margin-bottom: 10px;
 }
 
-.signup-card input {
+.login-card input {
     height: 58px;
 
     padding: 0 18px;
@@ -127,16 +120,14 @@
     transition: .3s;
 }
 
-.signup-card input:focus {
+.login-card input:focus {
     border-color: #2563eb;
 
     box-shadow:
         0 0 0 4px rgba(37,99,235,.08);
 }
 
-.signup-card button {
-    margin-top: 10px;
-
+.login-card button {
     height: 58px;
 
     border: none;
@@ -160,32 +151,40 @@
     transition: .35s;
 }
 
-.signup-card button:hover {
+.login-card button:hover {
     transform: translateY(-3px);
 
     box-shadow:
         0 15px 35px rgba(37,99,235,.25);
 }
 
-.signup-card button:active {
-    transform: translateY(0);
+.login-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 10px;
+
+    text-align: center;
 }
 
-.signup-btn:active {
-    transform: scale(.97);
+.login-links a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.login-links p {
+    margin: 0;
 }
 
 @media (max-width: 768px) {
 
-    .signup-page {
-        padding: 100px 20px 30px;
-    }
-
-    .signup-card {
+    .login-card {
         padding: 30px 24px;
     }
 
-    .signup-card h1 {
+    .login-card h1 {
         font-size: 1.9rem;
     }
 }

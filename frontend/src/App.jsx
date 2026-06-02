@@ -1,15 +1,7 @@
-// import { useState } from 'react'
-// import './App.css'
-// import AppRoutes from './routes/Routes.jsx'
-
-// export default function App() {
-//   return <AppRoutes />;
-// }
-
-
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "./App.css";
 
 import AppRoutes from "./routes/Routes";
 
