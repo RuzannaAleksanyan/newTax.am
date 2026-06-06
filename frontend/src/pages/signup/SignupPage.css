@@ -189,3 +189,23 @@
         font-size: 1.9rem;
     }
 }
+
+.error-box {
+    background: #ffe5e5;
+    color: #d10000;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #ffb3b3;
+}
+
+.success-box {
+    background: #e6ffed;
+    color: #1a7f37;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14px;
+    border: 1px solid #9ae6b4;
+}
