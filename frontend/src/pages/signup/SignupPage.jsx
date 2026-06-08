@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./SignupPage.css";
 import Navbar from "../../components/navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 export default function SignupPage() {
+    const navigate = useNavigate();
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -48,7 +50,11 @@ export default function SignupPage() {
                 return;
             }
 
-            setSuccess(data.message);
+            // setSuccess(data.message);
+
+            setTimeout(() => {
+                navigate("/login");
+            }, 1000);
 
         }
         catch (error) {

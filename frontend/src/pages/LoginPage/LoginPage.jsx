@@ -1,30 +1,49 @@
+import { useState } from "react";
 import "./LoginPage.css";
 import Navbar from "../../components/navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const [error, setError] = useState("");
+    const [success, setSuccess] = useState("");
+
+    const navigate = useNavigate();
+
     const login = async () => {
-        const formData = new URLSearchParams();
-        formData.append("username", email);
-        formData.append("password", password);
+        setError("");
+        setSuccess("");
 
-        const res = await fetch("http://127.0.0.1:8000/login", {
-            method: "POST",
-            body: formData,
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+        try {
+            const res = await fetch("http://127.0.0.1:8000/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                setError(data.detail || "Login failed");
+                return;
             }
-        });
 
-        const data = await res.json();
+            localStorage.setItem("token", data.access_token);
+            setSuccess("Մուտքը հաջողվեց");
 
-        if (!res.ok) {
-            setError(data.detail);
-            return;
+            navigate("/profile");
+
+        } catch (err) {
+            setError("Սերվերի սխալ");
         }
-
-        localStorage.setItem("token", data.access_token);
-        setSuccess("Logged in!");
     };
 
     const getProfile = async () => {
@@ -49,21 +68,26 @@ export default function LoginPage() {
 
                 <h1>Մուտք գործել</h1>
 
-                <p>
-                    Մուտք գործեք ձեր NewTax.am հաշիվ
-                </p>
+                <p>Մուտք գործեք ձեր NewTax.am հաշիվ</p>
+
+                {error && <div className="error-box">{error}</div>}
+                {success && <div className="success-box">{success}</div>}
 
                 <input
                     type="email"
                     placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <input
                     type="password"
                     placeholder="Գաղտնաբառ"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <button>
+                <button onClick={login}>
                     Մուտք գործել
                 </button>
 
