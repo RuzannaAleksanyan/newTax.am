@@ -1,0 +1,56 @@
+.add-income {
+    padding: 30px;
+}
+
+.add-income h1 {
+    margin-bottom: 25px;
+}
+
+.income-form {
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.income-form input,
+.income-form textarea {
+    padding: 14px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.income-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.income-form button {
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}

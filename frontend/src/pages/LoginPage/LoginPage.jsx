@@ -39,17 +39,17 @@ export default function LoginPage() {
             localStorage.setItem("token", data.access_token);
             setSuccess("Մուտքը հաջողվեց");
 
-            navigate("/profile");
+            navigate("/dashboard");
 
         } catch (err) {
             setError("Սերվերի սխալ");
         }
     };
 
-    const getProfile = async () => {
+    const getDashboard = async () => {
         const token = localStorage.getItem("token");
 
-        const res = await fetch("http://127.0.0.1:8000/profile", {
+        const res = await fetch("http://127.0.0.1:8000/dashboard", {
             headers: {
                 Authorization: `Bearer ${token}`
             }

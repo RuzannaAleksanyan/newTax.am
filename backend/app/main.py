@@ -1,3 +1,7 @@
+
+# source venv/bin/activate
+# uvicorn app.main:app --reload
+
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -131,10 +135,10 @@ def get_current_user(
 
 
 # ----------------------
-# PROFILE (PROTECTED)
+# DASHBOARD (PROTECTED)
 # ----------------------
-@app.get("/profile")
-def profile(current_user: User = Depends(get_current_user)):
+@app.get("/dashboard")
+def dashboard(current_user: User = Depends(get_current_user)):
 
     return {
         "id": current_user.id,
