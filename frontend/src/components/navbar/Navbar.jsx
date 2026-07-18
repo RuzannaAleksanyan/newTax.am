@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import logo from "../../../public/logo.png";
 
 export default function Navbar() {
     const [language, setLanguage] = useState("Հայ");
@@ -40,7 +40,8 @@ export default function Navbar() {
         >
 
             <Link to="/" className="logo">
-                Tax.am
+                {/* Tax.am */}
+                <img src={logo} alt="Tax.am Logo" className="logo-image" />
             </Link>
 
             <div className="nav-buttons">

@@ -1,0 +1,32 @@
+.account-btn {
+    width: calc(100% - 32px);
+    margin: 16px;
+    padding: 12px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: #1f2937;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.account-btn:hover {
+    background: #374151;
+    transform: translateY(-2px);
+}
+
+.account-btn:active {
+    transform: scale(0.98);
+}

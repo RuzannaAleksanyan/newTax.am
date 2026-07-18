@@ -1,8 +1,8 @@
 import "./Dashboard.css";
 
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "./Sidebar/sidebar/Sidebar";
 
-import WelcomeSection from "./MainContent/WelcomeSection";
+import WelcomeSection from "./MainContent/WelcomeSection/WelcomeSection";
 import StatisticsCards from "./MainContent/StatisticsCards";
 import IncomeExpenseChart from "./MainContent/IncomeExpenseChart";
 

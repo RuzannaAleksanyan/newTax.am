@@ -1,12 +1,12 @@
+import "./Sidebar.css";
+
 export default function Sidebar() {
     return (
         <div className="sidebar">
-
-            <h2 className="logo">
-                NewTax
-            </h2>
-
             <nav>
+                <button className="sidebar-btn">
+                    Գլխավոր էջ logo 
+                </button>
 
                 <button className="sidebar-btn">
                     Վահանակ
@@ -38,8 +38,8 @@ export default function Sidebar() {
 
             </nav>
 
-            <button className="logout-btn">
-                Logout
+            <button className="account-btn">
+                Account
             </button>
 
         </div>

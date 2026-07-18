@@ -13,13 +13,13 @@ export default function StatisticsCards() {
             </div>
 
             <div className="stat-card">
-                <h3>Կարգավորում</h3>
-                <p>0 ֏</p>
+                <h3>Գործարքներ</h3>
+                <p>0</p>
             </div>
 
             <div className="stat-card">
-                <h3>Գործարքներ</h3>
-                <p>0</p>
+                <h3>Կարգավորում</h3>
+                <p>0 ֏</p>
             </div>
 
         </div>
