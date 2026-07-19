@@ -45,7 +45,6 @@ export default function SignupPage() {
                         : Array.isArray(data.detail)
                             ? data.detail.map(e => e.msg).join(", ")
                             : "Սխալ գրանցման ընթացքում";
-
                 setError(errorMsg);
                 return;
             }
@@ -53,9 +52,8 @@ export default function SignupPage() {
             // setSuccess(data.message);
 
             setTimeout(() => {
-                navigate("/login");
+                navigate("/business-registration");
             }, 1000);
-
         }
         catch (error) {
             setError("Սերվերի սխալ։ Փորձիր կրկին։");
@@ -67,7 +65,6 @@ export default function SignupPage() {
             <Navbar />
 
             <div className="signup-card">
-
                 <h1>Ստեղծել հաշիվ</h1>
 
                 {error && (

@@ -5,7 +5,7 @@ import SignupPage from "../pages/signup/SignupPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import ForgotPasswordPage from "../pages/forgotPassword/ForgotPasswordPage";
 import Dashboard from "../pages/dashboard/Dashboard";
-
+import BusinessRegistration from "../pages/BusinessRegistration/BusinessRegistration";  
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 import AddIncome from "../pages/transactions/AddIncome";
@@ -21,6 +21,8 @@ export default function AppRoutes() {
 
                 <Route path="/login" element={<LoginPage />} />
 
+                <Route path="/business-registration" element={<BusinessRegistration />} />
+                
                 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
                 {/* 🔐 PROTECTED ROUTE */}
