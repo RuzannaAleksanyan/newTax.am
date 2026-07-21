@@ -5,7 +5,7 @@ export default function Sidebar() {
         <div className="sidebar">
             <nav>
                 <button className="sidebar-btn">
-                    Գլխավոր էջ logo 
+                    Գլխավոր էջ logo
                 </button>
 
                 <button className="sidebar-btn">
@@ -36,12 +36,11 @@ export default function Sidebar() {
                     Կարգավորումներ
                 </button>
 
+                <button className="account-btn">
+                    Account
+                </button>
+
             </nav>
-
-            <button className="account-btn">
-                Account
-            </button>
-
         </div>
     );
 }

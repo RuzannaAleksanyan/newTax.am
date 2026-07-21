@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./BusinessRegistration.css";
 
-export default function BusinessRegistration() {
+export default function BusinessRegistration({ onNext }) {
     const today = new Date().toLocaleDateString("hy-AM", {
         weekday: "long",
         year: "numeric",
@@ -85,10 +85,6 @@ export default function BusinessRegistration() {
         <section className="business-registration">
             <div className="welcome-top">
                 <div className="welcome-left">
-                    <span className="welcome-badge">
-                        👋 Բարի վերադարձ
-                    </span>
-
                     <h1>
                         Կազմակերպության գրանցում
                     </h1>
@@ -106,9 +102,7 @@ export default function BusinessRegistration() {
                             📅 Այսօր
                         </span>
 
-                        <h3>
-                            {today}
-                        </h3>
+                        <h3> {today}</h3>
                     </div>
 
                     <div className="info-card">
@@ -116,34 +110,17 @@ export default function BusinessRegistration() {
                             💼 Կարգավիճակ
                         </span>
 
-                        <h3>
-                            Կարգավորում
-                        </h3>
-
+                        <h3> Կարգավորում </h3>
                     </div>
-
                 </div>
-
             </div>
 
             <div className="setup-business">
                 <div className="setup-header">
-                    <div className="setup-icon">
-                        🏢
-                    </div>
+                    <div className="setup-icon"> 🏢 </div>
 
                     <div>
-                        <span>
-                            Step 1 of 3
-                        </span>
-
-                        <h2>
-                            Կազմակերպության տվյալներ
-                        </h2>
-
-                        <p>
-                            Մուտքագրեք իրավաբանական և հաշվապահական հիմնական տվյալները
-                        </p>
+                        <h2> Կազմակերպության տվյալներ </h2>
                     </div>
                 </div>
 
@@ -154,20 +131,14 @@ export default function BusinessRegistration() {
                 )}
 
                 {success && (
-                    <div className="success-box">
-                        {success}
-                    </div>
+                    <div className="success-box"> {success} </div>
                 )}
 
                 <div className="form-group">
-                    <label>
-                        Կազմակերպության անվանում
-                    </label>
+                    <label> Կազմակերպության անվանում </label>
 
                     <div className="input-box">
-                        <span>
-                            🏢
-                        </span>
+                        <span> 🏢 </span>
 
                         <input
                             type="text"
@@ -179,55 +150,35 @@ export default function BusinessRegistration() {
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        Իրավաբանական ձև
-                    </label>
+                    <label> Իրավաբանական ձև </label>
 
                     <div className="input-box">
-                        <span>
-                            ⚖️
-                        </span>
+                        <span> ⚖️ </span>
 
                         <select
                             value={legalForm}
                             onChange={(e) => setLegalForm(e.target.value)}
                         >
-                            <option value="">
-                                Ընտրել
-                            </option>
+                            <option value=""> Ընտրել </option>
 
-                            <option value="ՍՊԸ">
-                                ՍՊԸ
-                            </option>
+                            <option value="ՍՊԸ"> ՍՊԸ </option>
 
-                            <option value="ԱՁ">
-                                ԱՁ
-                            </option>
+                            <option value="ԱՁ"> ԱՁ </option>
 
-                            <option value="ԲԲԸ">
-                                ԲԲԸ
-                            </option>
+                            <option value="ԲԲԸ"> ԲԲԸ </option>
 
-                            <option value="ՓԲԸ">
-                                ՓԲԸ
-                            </option>
+                            <option value="ՓԲԸ"> ՓԲԸ </option>
 
-                            <option value="ՀԿ">
-                                ՀԿ
-                            </option>
+                            <option value="ՀԿ"> ՀԿ </option>
                         </select>
                     </div>
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        ՀՎՀՀ (Tax ID)
-                    </label>
+                    <label> ՀՎՀՀ (Tax ID) </label>
 
                     <div className="input-box">
-                        <span>
-                            🆔
-                        </span>
+                        <span> 🆔 </span>
 
                         <input
                             type="text"
@@ -239,14 +190,10 @@ export default function BusinessRegistration() {
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        Պետական գրանցման համար
-                    </label>
+                    <label> Պետական գրանցման համար </label>
 
                     <div className="input-box">
-                        <span>
-                            📄
-                        </span>
+                        <span> 📄 </span>
 
                         <input
                             type="text"
@@ -258,14 +205,10 @@ export default function BusinessRegistration() {
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        Գրանցման ամսաթիվ
-                    </label>
+                    <label> Գրանցման ամսաթիվ </label>
 
                     <div className="input-box">
-                        <span>
-                            📅
-                        </span>
+                        <span> 📅 </span>
 
                         <input
                             type="date"
@@ -276,14 +219,10 @@ export default function BusinessRegistration() {
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        Գործունեության տեսակ
-                    </label>
+                    <label> Գործունեության տեսակ </label>
 
                     <div className="input-box">
-                        <span>
-                            💼
-                        </span>
+                        <span> 💼 </span>
 
                         <input
                             type="text"
@@ -295,43 +234,29 @@ export default function BusinessRegistration() {
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        Երկիր
-                    </label>
+                    <label> Երկիր </label>
 
                     <div className="input-box">
-                        <span>
-                            🌍
-                        </span>
+                        <span> 🌍 </span>
 
                         <select
                             value={country}
                             onChange={(e) => setCountry(e.target.value)}
                         >
-                            <option value="Հայաստան">
-                                Հայաստան
-                            </option>
+                            <option value="Հայաստան"> Հայաստան </option>
 
-                            <option value="Ռուսաստան">
-                                Ռուսաստան
-                            </option>
+                            <option value="Ռուսաստան"> Ռուսաստան </option>
 
-                            <option value="ԱՄՆ">
-                                ԱՄՆ
-                            </option>
+                            <option value="ԱՄՆ"> ԱՄՆ </option>
                         </select>
                     </div>
                 </div>
 
                 <div className="form-group">
-                    <label>
-                        Քաղաք
-                    </label>
+                    <label> Քաղաք </label>
 
                     <div className="input-box">
-                        <span>
-                            🏙️
-                        </span>
+                        <span> 🏙️ </span>
 
                         <input
                             type="text"
@@ -361,10 +286,7 @@ export default function BusinessRegistration() {
                     </div>
                 </div>
 
-                <button
-                    className="continue-btn"
-                    onClick={handleSubmit}
-                >
+                <button onClick={onNext}>
                     Շարունակել →
                 </button>
             </div>

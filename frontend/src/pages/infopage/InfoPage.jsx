@@ -25,7 +25,7 @@ export default function InfoPage() {
 
             <ExchangeSection />
 
-            <ReportsSection />
+            {/* <ReportsSection /> */}
 
             <AdvantagesSection />
 

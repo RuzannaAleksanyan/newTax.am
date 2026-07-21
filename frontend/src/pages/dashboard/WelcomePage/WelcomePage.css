@@ -1,0 +1,243 @@
+.welcome {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fafafa;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.blur {
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+}
+
+
+
+.blur-one {
+
+    width:500px;
+
+    height:500px;
+
+    background:#bfdbfe;
+
+    top:-200px;
+
+    left:-150px;
+
+}
+
+
+
+.blur-two {
+
+    width:450px;
+
+    height:450px;
+
+    background:#ddd6fe;
+
+    bottom:-150px;
+
+    right:-100px;
+
+}
+
+
+
+
+.welcome-content {
+
+    text-align:center;
+
+    max-width:850px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.mini-logo {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    width:70px;
+
+    height:70px;
+
+
+    border-radius:22px;
+
+
+    background:#111827;
+
+    color:white;
+
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+h1 {
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin:0;
+
+}
+
+
+
+h1 span {
+
+    color:#2563eb;
+
+}
+
+
+
+p {
+
+    max-width:620px;
+
+    margin:35px auto;
+
+    font-size:21px;
+
+    line-height:1.7;
+
+    color:#6b7280;
+
+}
+
+
+
+
+.action button {
+
+    border:none;
+
+    padding:20px 45px;
+
+    border-radius:999px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.action button:hover {
+
+    transform:scale(1.04);
+
+}
+
+
+
+.action span {
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#9ca3af;
+
+    font-size:14px;
+
+}
+
+
+
+
+.bottom-info {
+
+    margin-top:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:70px;
+
+}
+
+
+
+.bottom-info div {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+
+.bottom-info strong {
+
+    font-size:36px;
+
+    color:#111827;
+
+}
+
+
+
+.bottom-info span {
+
+    color:#6b7280;
+
+}
+

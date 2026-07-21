@@ -52,7 +52,7 @@ export default function SignupPage() {
             // setSuccess(data.message);
 
             setTimeout(() => {
-                navigate("/business-registration");
+                navigate("/login");
             }, 1000);
         }
         catch (error) {
