@@ -13,6 +13,7 @@ import StatisticsCards from "./MainContent/StatisticsCards";
 import IncomeExpenseChart from "./MainContent/IncomeExpenseChart";
 
 import ContactInformation from "../ContactInformation/ContactInformation";
+import BankInformation from "../BankInformation/BankInformation";
 
 export default function Dashboard() {
 
@@ -61,7 +62,18 @@ export default function Dashboard() {
                 {activeSection === "contact" && (
                     <ContactInformation
                         onBack={() => setActiveSection("accounting")}
-                        onNext={() => setActiveSection("dashboard")}
+                        onNext={() => setActiveSection("bank")}
+                    />
+                )}
+
+                {activeSection === "bank" && (
+                    <BankInformation
+                        onBack={() =>
+                            setActiveSection("contact")
+                        }
+                        onNext={() =>
+                            setActiveSection("dashboard")
+                        }
                     />
                 )}
 

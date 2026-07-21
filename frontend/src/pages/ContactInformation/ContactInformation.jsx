@@ -77,7 +77,7 @@ export default function ContactInformation({ onBack, onNext }) {
                     className="next"
                     onClick={onNext}
                 >
-                    Ավարտել →
+                    Շարունակել →
                 </button>
 
             </div>
